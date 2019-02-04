@@ -2,6 +2,33 @@ import React, { Component } from 'react';
 
 class RegistrationForm extends Component {
 
+  state = {
+    username: '',
+    email: '',
+    password: '',
+    password_confirmation: ''
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+     event.preventDefault()
+     const data = JSON.stringify({user: this.state})
+       fetch('/users', {
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+       },
+       method: "POST",
+       body: data
+     })
+     .then(res => res.json())
+     .then(json => {console.log(json)});
+   };
 
   render(){
     return (
@@ -29,6 +56,7 @@ class RegistrationForm extends Component {
          onChange={this.handleChange}/><br/>
          <input type="submit" value="Register"/>
          </form>
+         Already have an account? sign in <a href="" to="_blank" onClick={(event) => this.props.handleRegistration(event)}>here</a>
        </div>
       )
     }

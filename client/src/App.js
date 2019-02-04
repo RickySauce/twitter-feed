@@ -5,6 +5,15 @@ import { FaTwitter } from "react-icons/fa";
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    user: ''
+  }
+
+  handleLogin = (user) => {
+    this.setState({user: user})
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,7 +21,7 @@ class App extends Component {
           <h1>THIS IS FWITTER <FaTwitter/></h1>
         </header>
         <TweetFeed/>
-        <UserController/>
+        <UserController handleLogin={this.handleLogin}/>
       </div>
     );
   }

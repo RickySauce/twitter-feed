@@ -9,7 +9,7 @@ class LoginRegistration extends Component {
   }
 
   handleRegistration = (event) => {
-    event.preventDefault(console.log('prevented'))
+    event.preventDefault()
     this.setState((prevState) => {return {registration: prevState.registration ? false : true}})
   }
 
@@ -17,7 +17,8 @@ class LoginRegistration extends Component {
     return(
       <>
       {this.state.registration ?
-      <RegistrationForm/> : <LoginForm handleRegistration={this.handleRegistration}/>}
+      <RegistrationForm handleLogin={this.props.handleLogin} handleRegistration={this.handleRegistration}/> :
+      <LoginForm handleRegistration={this.handleRegistration}/>}
       </>
     )
   }
