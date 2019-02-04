@@ -21,7 +21,7 @@ class App extends Component {
           <h1>THIS IS FWITTER <FaTwitter/></h1>
         </header>
         <TweetFeed/>
-        <UserController handleLogin={this.handleLogin}/>
+        <UserController user={this.state.user} handleLogin={this.handleLogin}/>
       </div>
     );
   }

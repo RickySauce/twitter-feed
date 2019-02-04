@@ -27,7 +27,7 @@ class RegistrationForm extends Component {
        body: data
      })
      .then(res => res.json())
-     .then(json => {console.log(json)});
+     .then(json => {return json.errors ? null: this.props.handleLogin(json) });
    };
 
   render(){
