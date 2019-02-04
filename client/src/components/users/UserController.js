@@ -4,7 +4,6 @@ import LoginRegistration from './LoginRegistration'
 class UserController extends Component {
 
   render(){
-    console.log(this.props.user)
     return(
       <div className="the-user">
       {this.props.user ?
