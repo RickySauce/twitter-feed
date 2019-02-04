@@ -4,9 +4,10 @@ const Tweet = (props) => {
 
     return (
       <div className="the-tweet">
-        {props.user ?
-          props.user :null
+        {props.username ?
+          props.username :null
         }
+        <br/>
         {props.body}
       </div>
     )

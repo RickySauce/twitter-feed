@@ -1,24 +1,11 @@
-# README
+# INSTALLATION AND SETUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+run the following in root:
+ - rake db:migrate
+ - bundle install
 
-Things you may want to cover:
+cd into client and run:
+  - npm install
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+cd back into root and run:
+  - rake start

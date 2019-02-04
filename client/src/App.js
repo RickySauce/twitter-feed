@@ -7,7 +7,14 @@ import './App.css';
 class App extends Component {
 
   state = {
-    user: ''
+    user: '',
+    tweets: []
+  }
+
+  componentDidMount(){
+    fetch(`/tweets`)
+    .then(res => res.json())
+    .then(json => this.setState({tweets: json}))
   }
 
   handleLogin = (user) => {
@@ -20,7 +27,7 @@ class App extends Component {
         <header className="fwitter-header">
           <h1>THIS IS FWITTER <FaTwitter/></h1>
         </header>
-        <TweetFeed/>
+        <TweetFeed tweets={this.state.tweets}/>
         <UserController user={this.state.user} handleLogin={this.handleLogin}/>
       </div>
     );
