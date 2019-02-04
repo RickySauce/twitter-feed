@@ -18,7 +18,7 @@ class LoginRegistration extends Component {
       <>
       {this.state.registration ?
       <RegistrationForm handleLogin={this.props.handleLogin} handleRegistration={this.handleRegistration}/> :
-      <LoginForm handleRegistration={this.handleRegistration}/>}
+      <LoginForm handleLogin={this.props.handleLogin} handleRegistration={this.handleRegistration}/>}
       </>
     )
   }
