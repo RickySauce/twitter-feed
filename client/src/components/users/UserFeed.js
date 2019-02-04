@@ -20,9 +20,9 @@ class UserFeed extends Component {
   }
 
   render(){
-    console.log(this.props.user.id)
     return(
       <>
+      <h3>{this.props.user.username}'s tweets</h3>
       <ul>
       {this.state.tweets.map(tweet => <Tweet body={tweet.body}/>)}
       </ul>
