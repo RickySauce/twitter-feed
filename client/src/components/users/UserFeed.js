@@ -16,6 +16,7 @@ class UserFeed extends Component {
 
   updateFeed = (tweet) => {
     this.setState((prevState) => {return {tweets: [...prevState.tweets, tweet]}})
+    this.props.handleNewTweet(tweet)
   }
 
   render(){

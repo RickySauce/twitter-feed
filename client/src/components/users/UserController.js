@@ -8,7 +8,7 @@ class UserController extends Component {
     return(
       <div className="the-user">
       {this.props.user ?
-        <UserFeed user={this.props.user}/> : <LoginRegistration handleLogin={this.props.handleLogin}/>
+        <UserFeed user={this.props.user} handleNewTweet={this.props.handleNewTweet}/> : <LoginRegistration handleLogin={this.props.handleLogin}/>
       }
       </div>
     )

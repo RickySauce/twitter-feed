@@ -21,6 +21,10 @@ class App extends Component {
     this.setState({user: user})
   }
 
+  handleNewTweet = (tweet) => {
+    this.setState((prevState) => { return {tweets: [...prevState.tweets, tweet]}})
+  }
+
   render() {
     return (
       <div className="App">
@@ -28,7 +32,7 @@ class App extends Component {
           <h1>THIS IS FWITTER <FaTwitter/></h1>
         </header>
         <TweetFeed tweets={this.state.tweets}/>
-        <UserController user={this.state.user} handleLogin={this.handleLogin}/>
+        <UserController handleNewTweet={this.handleNewTweet} user={this.state.user} handleLogin={this.handleLogin}/>
       </div>
     );
   }
