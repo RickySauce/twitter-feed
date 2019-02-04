@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginForm from './LoginForm'
+import RegistrationForm from './RegistrationForm'
 
 class LoginRegistration extends Component {
 
@@ -13,11 +14,10 @@ class LoginRegistration extends Component {
   }
 
   render(){
-    console.log(this.state)
     return(
       <>
       {this.state.registration ?
-      "hello" : <LoginForm handleRegistration={this.handleRegistration}/>}
+      <RegistrationForm/> : <LoginForm handleRegistration={this.handleRegistration}/>}
       </>
     )
   }
