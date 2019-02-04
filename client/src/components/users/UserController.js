@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginRegistration from './LoginRegistration'
+import UserFeed from './UserFeed'
 
 class UserController extends Component {
 
@@ -7,7 +8,7 @@ class UserController extends Component {
     return(
       <div className="the-user">
       {this.props.user ?
-        "hello" : <LoginRegistration handleLogin={this.props.handleLogin}/>
+        <UserFeed user={this.props.user}/> : <LoginRegistration handleLogin={this.props.handleLogin}/>
       }
       </div>
     )

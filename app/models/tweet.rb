@@ -1,3 +1,4 @@
 class Tweet < ApplicationRecord
-  belongs_to :user 
+  belongs_to :user
+  validates :body, :presence => {:message => "Field must be filled in"} 
 end

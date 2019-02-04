@@ -3,6 +3,10 @@
   color: #1DA1F2;
 }
 
+.the-tweet {
+  margin: 5px;
+}
+
 .the-feed {
   display: inline-block;
   width: 50%;
