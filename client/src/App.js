@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TweetFeed from './components/TweetFeed'
+import UserController from './components/users/UserController'
 import { FaTwitter } from "react-icons/fa";
 import './App.css';
 
@@ -11,6 +12,7 @@ class App extends Component {
           <h1>THIS IS FWITTER <FaTwitter/></h1>
         </header>
         <TweetFeed/>
+        <UserController/>
       </div>
     );
   }

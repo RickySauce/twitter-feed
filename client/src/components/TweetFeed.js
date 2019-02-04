@@ -5,8 +5,7 @@ class TweetFeed extends Component {
   render(){
     return (
       <div className="the-feed">
-      hello
-      HEELLLOOOOOOOOOOOOOO
+      this is the feed
       </div>
     )
   }
