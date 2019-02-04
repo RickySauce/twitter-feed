@@ -1,3 +1,16 @@
+.fwitter-header {
+  border-bottom: 1px solid #1DA1F2;
+  color: #1DA1F2;
+}
+
+.the-feed {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .App {
   text-align: center;
 }
